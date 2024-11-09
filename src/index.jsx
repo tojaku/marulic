@@ -1,8 +1,8 @@
 /* @refresh reload */
 import { render } from 'solid-js/web';
 
-import './index.css';
-import App from './App';
+import './css/global/index.css';
+import App from './pages/Pocetna';
 
 const root = document.getElementById('root');
 

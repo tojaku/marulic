@@ -1,6 +1,4 @@
-import styles from './App.module.css';
-
-function App() {
+function Pocetna() {
     return (
         <div>
             <h1>Marko Marulić</h1>
@@ -8,4 +6,4 @@ function App() {
     );
 }
 
-export default App;
+export default Pocetna;
