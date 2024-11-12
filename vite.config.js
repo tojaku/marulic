@@ -11,5 +11,5 @@ export default defineConfig({
   build: {
     target: "esnext",
   },
-  base: "https://github.com/tojaku/marulic.git"
+  base: process.env.NODE_ENV === "production" ? "/marulic/" : "/"
 });
