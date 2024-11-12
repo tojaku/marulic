@@ -1,12 +1,18 @@
-import { render } from 'solid-js/web';
+import { render } from "solid-js/web";
+import { Router, Route } from "@solidjs/router";
 
-import "./css/global/index.css";
-import Pocetna from "./pages/Pocetna";
+import "./index.css";
+
+import Home from "./pages/Home";
 
 const root = document.getElementById("root");
 
 if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
-    throw new Error("No root element");
+  throw new Error("#root not found");
 }
 
-render(() => <Pocetna />, root);
+render(() => (
+  <Router>
+    <Route path="/" component={Home} />
+  </Router>
+), root);
