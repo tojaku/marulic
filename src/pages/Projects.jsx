@@ -1,5 +1,5 @@
 export default function Projects(props) {
     return (
-        <div>Naši radovi</div>
+        <div class="text-3xl font-bold">Naši radovi</div>
     );
 }

@@ -1,5 +1,5 @@
 export default function Help(props) {
     return (
-        <div>Pomoć</div>
+        <div class="text-3xl font-bold">Pomoć</div>
     );
 }

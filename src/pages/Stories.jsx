@@ -3,7 +3,7 @@ import pdf from "../assets/eknjiga.pdf"
 export default function Stories(props) {
     return (
         <>
-            <div class="text-xl font-bold mb-3">Priče o Maruliću</div>
+            <div class="text-3xl font-bold mb-3">Priče o Maruliću</div>
             <div class="mb-3">
                 Pred vama je zbirka kratkih priča inspiriranih životom i djelom Marka Marulića. Većina
                 priča nastala je u sinergiji čovjeka i najnovije tehnologije (AI).<br></br>

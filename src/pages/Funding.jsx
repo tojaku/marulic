@@ -1,5 +1,5 @@
 export default function Funding(props) {
     return (
-        <div>O projektu</div>
+        <div class="text-3xl font-bold">O projektu</div>
     );
 }
