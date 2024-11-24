@@ -14,9 +14,7 @@ export default function Home(props) {
                 </div>
                 <div class="lg:w-1/2 text-lg text-gray-700">
                     <p>
-                        Obilježavajući 500. obljetnicu smrti Marka Marulića, Vlada Republike Hrvatske proglasila je 2024. godinu
-                        Godinom Marka Marulića. Ako ovo čitate, znači da ste skenirali jedan od QR kodova priloženih na plakatu
-                        te došli na ovu stranicu. Ova stranica vodi vas kroz Marulićev život povodom godine Marka Marulića.
+                        Obilježavajući 500. obljetnicu smrti Marka Marulića, Vlada Republike Hrvatske proglasila je 2024. godinu Godinom Marka Marulića. Ako čitate ovo, znači da ste skenirali jedan od QR kodova s plakata i stigli na ovu stranicu. Ova stranica pruža pregled Marulićeva života u povodu godine posvećene ovom velikanu.
                     </p>
                     <p class="mt-4 font-semibold text-gray-800">Uživajte!</p>
                 </div>
