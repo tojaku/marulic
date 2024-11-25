@@ -1,6 +1,7 @@
 import { HashRouter, Route } from "@solidjs/router";
 
 import logo from "./assets/favicon.png";
+import novcanica from "./assets/marulic_novcanica.png";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -91,6 +92,7 @@ function Layout(props) {
                             <TopMenu />
                         </ul>
                     </div>
+                    <img src={novcanica} class="w-32"/>
                     <a href="/" class="btn btn-ghost">
                         <div class="flex flex-col items-start">
                             <span class="text-xl">Marko Marulić</span>
@@ -116,7 +118,7 @@ function Layout(props) {
                 <nav class="grid grid-flow-col gap-4">
                     <BottomMenu />
                 </nav>
-                <img src={logo} class="w-48"/>
+                <img src={logo} class="w-52"/>
                 <aside>
                     <p>Vlasnička prava © {new Date().getFullYear()} Obrtnička škola Koprivnica</p>
                 </aside>
