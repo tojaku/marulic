@@ -1,5 +1,7 @@
 import { HashRouter, Route } from "@solidjs/router";
 
+import logo from "./assets/favicon.png";
+
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Cookbook from "./pages/Cookbook";
@@ -68,7 +70,7 @@ function BottomMenu(props) {
 function Layout(props) {
     return (
         <>
-            <div class="navbar bg-base-100">
+            <div class="navbar bg-base-200">
                 <div class="navbar-start">
                     <div class="dropdown">
                         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -102,7 +104,7 @@ function Layout(props) {
                     </ul>
                 </div>
                 <div class="navbar-end">
-                    <a href="/onama" class="btn">O nama</a>
+                    <a href="/onama" class="btn bg-base-100">O nama</a>
                 </div>
             </div>
 
@@ -110,12 +112,13 @@ function Layout(props) {
                 {props.children}
             </div>
 
-            <footer class="footer footer-center bg-base-200 text-base-content rounded p-10">
+            <footer class="footer footer-center bg-base-200 text-base-content rounded p-6 gap-2">
                 <nav class="grid grid-flow-col gap-4">
                     <BottomMenu />
                 </nav>
+                <img src={logo} class="w-48"/>
                 <aside>
-                    <p>Vlasnička prava © {new Date().getFullYear()} Obrtnička škola Koprivnica i učenici</p>
+                    <p>Vlasnička prava © {new Date().getFullYear()} Obrtnička škola Koprivnica</p>
                 </aside>
             </footer>
         </>
