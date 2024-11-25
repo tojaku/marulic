@@ -1,10 +1,6 @@
 export default function About(props) {
     return (
         <div className="p-8">
-            <div className="text-3xl font-bold mb-6 text-center">
-                O nama
-            </div>
-
             <div className="card w-full lg:w-1/2 mx-auto">
                 <div className="card-body">
                     <h2 className="card-title text-2xl">Obrtnička škola Koprivnica</h2>
@@ -13,13 +9,11 @@ export default function About(props) {
                         48000 Koprivnica <br />
                         Hrvatska
                     </p>
-
                     <div className="divider">Profesori</div>
                     <ul className="list-disc list-inside">
                         <li>Danijela Vrtiprah</li>
                         <li>Tomislav Jakupić</li>
                     </ul>
-
                     <div className="divider">Učenici</div>
                     <p className="font-semibold">Voditelji skupina:</p>
                     <ul className="list-disc list-inside mb-4">
@@ -27,7 +21,6 @@ export default function About(props) {
                         <li>Viktor Srpak</li>
                         <li>Paula Šimić</li>
                     </ul>
-
                     <p className="font-semibold">Ostali učenici:</p>
                     <ul className="list-disc list-inside grid grid-cols-2 gap-2">
                         <li>Ivano Grubić</li>
