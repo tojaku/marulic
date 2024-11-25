@@ -1,4 +1,4 @@
-import kuharica from "../assets/kuharica.pdf"
+import pdf from "../assets/kuharica.pdf"
 
 export default function Cookbook(props) {
     return (
@@ -7,8 +7,11 @@ export default function Cookbook(props) {
             <div class="mb-3">
                 {/*DODATI OPIS*/}
             </div>
-            <object data={kuharica} type="application/pdf" width="100%" height="750px">
+            <object data={pdf} type="application/pdf" class="w-full min-h-[75vh]">
                 Vaš preglednik ne podržava prikaz PDF zapisa.
+                Datoteku možete pogledati <button class="link" onClick={() => {
+                    window.location.href = pdf;
+                }}>ovdje</button>.
             </object>
         </>
     );
