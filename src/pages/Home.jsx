@@ -1,4 +1,4 @@
-import slika1 from "../assets/home_marulic_1.png";
+import slika1 from "../assets/marulic_bista.png";
 
 export default function Home(props) {
     return (

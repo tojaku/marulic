@@ -11,9 +11,7 @@ export default function Play() {
                 allow="autoplay; encrypted-media"
                 allowfullscreen
             ></iframe>
-            <p style="margin-top: 10px; font-size: 14px; color: gray;">
-                Napomena: Ovaj video nije rad učenika Obrtničke škole Koprivnica, već studenata UMAS-a iz Splita.
-            </p>
+            <p class="mt-2">Ova predstava je rad studenata UMAS-a iz Splita.</p>
         </div>
     );
 }

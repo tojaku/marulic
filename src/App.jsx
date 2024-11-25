@@ -15,32 +15,38 @@ export default function App(props) {
     return (
         <HashRouter root={Layout}>
             <Route path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/cookbook" component={Cookbook} />
-            <Route path="/play" component={Play} />
-            <Route path="/projects" component={Projects} />
-            <Route path="/stories" component={Stories} />
-            <Route path="/biography" component={Biography} />
-            <Route path="/works" component={Works} />
-            <Route path="/funding" component={Funding} />
-            <Route path="/help" component={Help} />
+            <Route path="/onama" component={About} />
+            <Route path="/kuharica" component={Cookbook} />
+            <Route path="/predstava" component={Play} />
+            <Route path="/radovi" component={Projects} />
+            <Route path="/price" component={Stories} />
+            <Route path="/biografija" component={Biography} />
+            <Route path="/stvaralastvo" component={Works} />
+            <Route path="/oprojektu" component={Funding} />
+            <Route path="/pomoc" component={Help} />
         </HashRouter>
     );
 }
 
 function TopMenu(props) {
+    let submenu;
+
+    function closeSubmenu() {
+        submenu.removeAttribute("open");
+    }
+
     return (
         <>
-            <li><a href="/biography">Biografija</a></li>
-            <li><a href="/works">Stvaralaštvo</a></li>
+            <li><a href="/biografija" onClick={closeSubmenu}>Biografija</a></li>
+            <li><a href="/stvaralastvo" onClick={closeSubmenu}>Stvaralaštvo</a></li>
             <li>
-                <details>
+                <details ref={submenu}>
                     <summary>Zanimljivosti</summary>
-                    <ul class="p-2">
-                        <li><a href="/stories">Priče</a></li>
-                        <li><a href="/cookbook">Kuharica</a></li>
-                        <li><a href="/projects">Naši radovi</a></li>
-                        <li><a href="/play">Predstava</a></li>
+                    <ul class="p-2" onClick={closeSubmenu}>
+                        <li><a href="/price">Priče</a></li>
+                        <li><a href="/kuharica">Kuharica</a></li>
+                        <li><a href="/radovi">Naši radovi</a></li>
+                        <li><a href="/predstava">Predstava</a></li>
                     </ul>
                 </details>
             </li>
@@ -51,9 +57,9 @@ function TopMenu(props) {
 function BottomMenu(props) {
     return (
         <>
-            <a href="/help" class="link link-hover">Pomoć</a>
-            <a href="/funding" class="link link-hover">O projektu</a>
-            <a href="/about" class="link link-hover">O nama</a>
+            <a href="/pomoc" class="link link-hover">Pomoć</a>
+            <a href="/oprojektu" class="link link-hover">O projektu</a>
+            <a href="/onama" class="link link-hover">O nama</a>
             <a href="https://ss-obrtnicka-koprivnica.skole.hr" target="_blank" class="link link-hover">Obrtnička škola Koprivnica</a>
         </>
     );
@@ -79,9 +85,7 @@ function Layout(props) {
                                     d="M4 6h16M4 12h8m-8 6h16" />
                             </svg>
                         </div>
-                        <ul
-                            tabindex="0"
-                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                             <TopMenu />
                         </ul>
                     </div>
@@ -93,12 +97,12 @@ function Layout(props) {
                     </a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
-                    <ul class="menu menu-horizontal px-1">
+                    <ul class="menu menu-horizontal px-1 gap-1">
                         <TopMenu />
                     </ul>
                 </div>
                 <div class="navbar-end">
-                    <a href="/about" class="btn">O nama</a>
+                    <a href="/onama" class="btn">O nama</a>
                 </div>
             </div>
 
