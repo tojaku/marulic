@@ -26,6 +26,8 @@ export default function About(props) {
                         <li>Viktor Srpak</li>
                         <li>Paula Šimić</li>
                     </ul>
+
+                    {/* TODO: Potrebno dodati ostale ucenike iz drugih razreda */}
                     <p class="font-semibold">Ostali učenici:</p>
                     <ul class="list-disc list-inside grid grid-cols-2">
                         <li>Ivano Grubić</li>

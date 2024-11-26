@@ -19,24 +19,49 @@ export default function Quiz(props) {
     };
 
     return (
-        <div>
-            <div class="text-3xl font-bold">Kviz o Marku Maruliću</div>
+        <div class="p-8">
+            <div class="text-3xl font-bold mb-4">Kviz o Marku Maruliću</div>
 
             {questions.map((q, index) => (
-                <>
-                    <p class="text-xl mt-4">{q.question}</p>
+                <div class="mb-6" key={index}>
+                    <p class="text-xl">{index + 1}. {q.question}</p>
                     {q.options.map((option, i) => (
-                        <div class="form-control">
+                        <div class="form-control" key={i}>
                             <label class="label cursor-pointer w-fit gap-2">
-                                <input type="radio" name={`question-${index}`} value={i} class="radio checked:bg-red-500" onClick={() => handleAnswer(index, i)} />
+                                <input
+                                    type="radio"
+                                    name={`question-${index}`}
+                                    value={i}
+                                    class="radio checked:bg-red-500"
+                                    onClick={() => handleAnswer(index, i)}
+                                />
                                 <span class="label-text text-lg">{option}</span>
                             </label>
                         </div>
                     ))}
-                </>
-
+                    {showResults() && (
+                        <p
+                            class={
+                                answers()[index] === q.correct
+                                    ? "text-green-500 mt-2"
+                                    : "text-red-500 mt-2"
+                            }
+                        >
+                            {answers()[index] === q.correct
+                                ? "Točan odgovor!"
+                                : `Netočno. Točan odgovor je: ${q.options[q.correct]}`}
+                        </p>
+                    )}
+                </div>
             ))}
-            <button class="btn btn-primary" onClick={() => setShowResults(true)}>Završi kviz</button>
+
+            <button
+                class="btn btn-primary mt-4"
+                onClick={() => setShowResults(true)}
+            >
+                Završi kviz
+            </button>
+
             {showResults() && (
                 <div class="text-4xl mt-8">
                     <p>Vaš rezultat: {calculateScore()} / {questions.length}</p>
@@ -73,29 +98,58 @@ const questions = [
         correct: 1,
     },
     {
-        question: "Gdje se odvija radnja „Judite“?",
-        options: ["u Jeruzalemu", "u Betuliji", "u Splitu"],
-        correct: 1,
-    },
-    {
-        question: "S koliko je godina Judita umrla?",
-        options: ["87", "105", "67"],
-        correct: 1,
-    },
-    {
-        question: "Djelo „Judita“ je ep.",
-        options: ["DA", "NE"],
+        question: "Kojom je vrstom stiha pisano djelo „Judita“?",
+        options: ["dvostruko rimovanim dvanaestercem", "šestercem", "dvanaestercem"],
         correct: 0,
     },
     {
-        question: "Djelo „Judita“ prvi je književni ep pisan na hrvatskome jeziku.",
-        options: ["DA", "NE"],
+        question: "Čiju glavu u ruci nosi Judita na kraju djela?",
+        options: ["Nabukodonosorovu", "Holofernovu", "Joakimovu", "Ahiorovu"],
+        correct: 1,
+    },
+    {
+        question: "Marulićeva „Judita“ napisana je i objavljena na početku…",
+        options: ["14. stoljeća", "15. stoljeća", "16. stoljeća", "17. stoljeća"],
+        correct: 2,
+    },
+    {
+        question: "Kako se naziva pjevanje u „Juditi“?",
+        options: ["plač", "stenjanje", "skazanje", "libro"],
+        correct: 3,
+    },
+    {
+        question: "Kako se zove postupak u dijelu stiha: „zato ću moliti, Bože, tvoju svitlost…“?",
+        options: ["alegorija", "metafora", "personifikacija", "invokacija"],
+        correct: 3,
+    },
+    {
+        question: "Kako se zove Juditina sluškinja?",
+        options: ["Abra", "Holoferna", "Simona"],
         correct: 0,
     },
     {
-        question: "Od koliko se pjevanja (libara) sastoji djelo „Judita“?",
-        options: ["5", "6", "8", "10"],
+        question: "Koji je događaj opisan u djelu „Judita“?",
+        options: ["Opsada Betulije", "Bitka kod Maratona", "Trojanski rat"],
+        correct: 0,
+    },
+    {
+        question: "Koje je godine prvi put objavljena „Judita“?",
+        options: ["1492. g.", "1521. g.", "1580. g."],
         correct: 1,
+    },
+    {
+        question: "U kojem se stoljeću odvija radnja „Judite“?",
+        options: ["7. st. pr. Kr.", "7. st.", "1. st. pr. Kr."],
+        correct: 0,
+    },
+    {
+        question: "Tko je naredio Holofernu da pokori nedostojnike?",
+        options: ["Nabukodonosor", "Arfakad", "Akior"],
+        correct: 0,
+    },
+    {
+        question: "Što se dogodilo Juditinu gradu nakon napada Holofernove vojske?",
+        options: ["Grad je srušen.", "Stanovništvo je porobljeno.", "Zavladala je žeđ."],
+        correct: 2,
     },
 ];
-

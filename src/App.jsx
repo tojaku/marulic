@@ -26,7 +26,7 @@ export default function App(props) {
             <Route path="/biografija" component={Biography} />
             <Route path="/stvaralastvo" component={Works} />
             <Route path="/oprojektu" component={Funding} />
-            <Route path="/kviz" component={Quiz}/>
+            <Route path="/kviz" component={Quiz} />
         </HashRouter>
     );
 }
@@ -92,13 +92,20 @@ function Layout(props) {
                             <TopMenu />
                         </ul>
                     </div>
-                    <img src={novcanica} class="w-32"/>
-                    <a href="/" class="btn btn-ghost">
-                        <div class="flex flex-col items-start">
-                            <span class="text-xl">Marko Marulić</span>
-                            <span class="text-xs">u Obrtničkoj školi Koprivnica</span>
+
+                    <a href="/" class="btn btn-ghost hover:bg-transparent hover:text-inherit">
+                        <div class="flex items-center" onClick={() => window.location.href = "/"}>
+                            <img src={novcanica} class="w-32 mr-4" alt="Novčanica Marko Marulić" />
+                            <div class="flex flex-col">
+                                <span class="text-xl">Marko Marulić</span>
+                                <span class="text-xs">u Obrtničkoj školi Koprivnica</span>
+                            </div>
                         </div>
                     </a>
+
+
+
+
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal px-1 gap-1">
@@ -117,7 +124,7 @@ function Layout(props) {
                 <nav class="grid grid-flow-col gap-4">
                     <BottomMenu />
                 </nav>
-                <img src={logo} class="w-52"/>
+                <img src={logo} class="w-52" />
                 <aside>
                     <p>Vlasnička prava © {new Date().getFullYear()} Obrtnička škola Koprivnica</p>
                 </aside>
