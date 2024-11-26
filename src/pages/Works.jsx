@@ -1,6 +1,6 @@
 export default function Works(props) {
     return (
-        <div class="prose lg:prose-xl">
+        <div class="prose lg:prose-xl max-w-none">
             <h1 class="text-3xl font-bold">Stvaralaštvo</h1>
 
             <p>Marko Marulić bio je kršćanski humanist i renesansni književnik koji je svoj opus temeljio na harmoniji klasične antičke mudrosti, kršćanske etike i srednjovjekovne pobožnosti. Njegova djela svjedoče o visokom obrazovanju i nadahnuću iz Biblije, hagiografije, patristike, antičke književnosti te suvremenih povijesnih zbivanja. Pisao je na latinskom, hrvatskom i talijanskom jeziku, pri čemu 80% opusa čini latinska književnost. Njegov književni stil kombinira čakavštinu, staroslavizme, štokavske elemente te utjecaje splitske renesansne kulture. Prepoznat je kao zagovornik kršćanskog morala i etike, čije su misli ostavile značajan utjecaj na europsku književnost.</p>

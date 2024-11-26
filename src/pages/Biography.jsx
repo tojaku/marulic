@@ -1,6 +1,6 @@
 export default function Biography(props) {
     return (
-        <div class="prose lg:prose-xl">
+        <div class="prose lg:prose-xl max-w-none">
             <h1 class="text-3xl font-bold">Biografija</h1>
 
             <p>Marko Marulić (lat. <i>Marcus Marulus Spalatensis</i>), rođen 18. kolovoza 1450. u Splitu, preminuo 5. siječnja 1524. u istome gradu, bio je hrvatski književnik, kršćanski humanist i otac hrvatske književnosti. Često se spominje s etnikom "Splićanin". Njegov bogati i raznovrsni književni opus ističe se iznimnom stilizacijom, znanjem i prilagodljivošću raznovrsnim čitateljskim publikama.</p>

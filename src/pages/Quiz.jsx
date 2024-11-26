@@ -20,25 +20,25 @@ export default function Quiz(props) {
 
     return (
         <div>
+            <div class="text-3xl font-bold">Kviz o Marku Maruliću</div>
+
             {questions.map((q, index) => (
-                <div>
-                    <p>{q.question}</p>
+                <>
+                    <p class="text-xl mt-4">{q.question}</p>
                     {q.options.map((option, i) => (
-                        <label>
-                            <input
-                                type="radio"
-                                name={`question-${index}`}
-                                value={i}
-                                onClick={() => handleAnswer(index, i)}
-                            />
-                            {option}
-                        </label>
+                        <div class="form-control">
+                            <label class="label cursor-pointer w-fit gap-2">
+                                <input type="radio" name={`question-${index}`} value={i} class="radio checked:bg-red-500" onClick={() => handleAnswer(index, i)} />
+                                <span class="label-text text-lg">{option}</span>
+                            </label>
+                        </div>
                     ))}
-                </div>
+                </>
+
             ))}
-            <button onClick={() => setShowResults(true)}>Završi kviz</button>
+            <button class="btn btn-primary" onClick={() => setShowResults(true)}>Završi kviz</button>
             {showResults() && (
-                <div>
+                <div class="text-4xl mt-8">
                     <p>Vaš rezultat: {calculateScore()} / {questions.length}</p>
                 </div>
             )}
