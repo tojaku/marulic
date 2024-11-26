@@ -6,7 +6,7 @@ export default function About(props) {
             <div class="card w-full lg:w-10/12 mx-auto">
                 <div class="card-body">
                     <h2 class="card-title text-2xl">Obrtnička škola Koprivnica</h2>
-                    <div class="flex gap-4 items-center my-4">
+                    <div class="flex flex-wrap gap-4 items-center my-4">
                         <img src={logo} class="w-64" />
                         <p class="text-2xl">
                             Trg Slobode 7 <br />

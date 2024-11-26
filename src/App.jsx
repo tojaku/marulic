@@ -12,7 +12,6 @@ import Stories from "./pages/Stories";
 import Biography from "./pages/Biography";
 import Works from "./pages/Works";
 import Funding from "./pages/Funding";
-import Help from "./pages/Help";
 import Quiz from "./pages/Quiz";
 
 export default function App(props) {
@@ -27,7 +26,6 @@ export default function App(props) {
             <Route path="/biografija" component={Biography} />
             <Route path="/stvaralastvo" component={Works} />
             <Route path="/oprojektu" component={Funding} />
-            <Route path="/pomoc" component={Help} />
             <Route path="/kviz" component={Quiz}/>
         </HashRouter>
     );
@@ -63,7 +61,6 @@ function TopMenu(props) {
 function BottomMenu(props) {
     return (
         <>
-            <a href="/pomoc" class="link link-hover">Pomoć</a>
             <a href="/oprojektu" class="link link-hover">O projektu</a>
             <a href="/onama" class="link link-hover">O nama</a>
             <a href="https://ss-obrtnicka-koprivnica.skole.hr" target="_blank" class="link link-hover">Obrtnička škola Koprivnica</a>
@@ -116,12 +113,11 @@ function Layout(props) {
             <div class="container mx-auto px-4 py-8 min-h-[70vh]">
                 {props.children}
             </div>
-
             <footer class="footer footer-center bg-base-200 text-base-content rounded p-6 gap-2">
                 <nav class="grid grid-flow-col gap-4">
                     <BottomMenu />
                 </nav>
-                <img src={logo} class="w-52"/>
+                <img src={logo} class="w-52"/>ZAD: sistematizacija vježbi (offensive and defensive security, cyber kill chain, threat hunting)
                 <aside>
                     <p>Vlasnička prava © {new Date().getFullYear()} Obrtnička škola Koprivnica</p>
                 </aside>
