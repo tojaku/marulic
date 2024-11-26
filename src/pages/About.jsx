@@ -1,28 +1,33 @@
+import logo from "../assets/obskc.png";
+
 export default function About(props) {
     return (
-        <div className="p-8">
-            <div className="card w-full lg:w-1/2 mx-auto">
-                <div className="card-body">
-                    <h2 className="card-title text-2xl">Obrtnička škola Koprivnica</h2>
-                    <p className="text-gray-600">
-                        Trg Slobode 7 <br />
-                        48000 Koprivnica <br />
-                        Hrvatska
-                    </p>
-                    <div className="divider">Profesori</div>
-                    <ul className="list-disc list-inside">
+        <div class="p-8">
+            <div class="card w-full lg:w-10/12 mx-auto">
+                <div class="card-body">
+                    <h2 class="card-title text-2xl">Obrtnička škola Koprivnica</h2>
+                    <div class="flex gap-4 items-center my-4">
+                        <img src={logo} class="w-64" />
+                        <p class="text-2xl">
+                            Trg Slobode 7 <br />
+                            48000 Koprivnica <br />
+                            Hrvatska
+                        </p>
+                    </div>
+                    <div class="divider">Profesori</div>
+                    <ul class="list-disc list-inside">
                         <li>Danijela Vrtiprah</li>
                         <li>Tomislav Jakupić</li>
                     </ul>
-                    <div className="divider">Učenici</div>
-                    <p className="font-semibold">Voditelji skupina:</p>
-                    <ul className="list-disc list-inside mb-4">
+                    <div class="divider">Učenici</div>
+                    <p class="font-semibold">Voditelji skupina:</p>
+                    <ul class="list-disc list-inside mb-4">
                         <li>Mihael Šestak</li>
                         <li>Viktor Srpak</li>
                         <li>Paula Šimić</li>
                     </ul>
-                    <p className="font-semibold">Ostali učenici:</p>
-                    <ul className="list-disc list-inside grid grid-cols-2 gap-2">
+                    <p class="font-semibold">Ostali učenici:</p>
+                    <ul class="list-disc list-inside grid grid-cols-2">
                         <li>Ivano Grubić</li>
                         <li>Marko Habek</li>
                         <li>Fran Horvat</li>

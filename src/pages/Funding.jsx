@@ -1,15 +1,15 @@
 export default function Funding(props) {
     return (
-        <div className="p-8 min-h-screen">
-            <div className="text-3xl font-bold mb-6 text-center">
+        <div class="p-2">
+            <div class="text-3xl font-bold mb-6 text-center">
                 O projektu
             </div>
-            <div className="max-w-4xl mx-auto text-lg leading-relaxed">
-                <p className="mb-4">
+            <div class="text-lg leading-relaxed">
+                <p class="mb-4">
                     U sklopu školskog projekta, učenici različitih strukovnih područja elektrotehnike, kulinarstva, računalstva i drugih okupili su se kako bi istražili i prikazali povezanost svojih zanimanja s Markom Marulićem, <i>Ocem hrvatske književnosti</i>. Cilj projekta bio je potaknuti interdisciplinarni pristup učenju te oživjeti Marulićevo stvaralaštvo na inovativan način.
                 </p>
-                <h2 className="text-xl font-semibold mb-3">Primjeri aktivnosti po zanimanjima:</h2>
-                <ul className="list-disc list-inside mb-4">
+                <h2 class="text-xl font-semibold mb-3">Primjeri aktivnosti po zanimanjima:</h2>
+                <ul class="list-disc list-inside mb-4">
                     <li>
                         <strong>Elektrotehnika:</strong> Učenici su osmislili modernu prezentaciju “Judita” pomoću interaktivne svjetlosne instalacije, simbolizirajući Marulićeve svjetlosne poruke moralnosti i duhovnosti.
                     </li>
