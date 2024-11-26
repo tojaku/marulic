@@ -117,7 +117,7 @@ function Layout(props) {
                 <nav class="grid grid-flow-col gap-4">
                     <BottomMenu />
                 </nav>
-                <img src={logo} class="w-52"/>ZAD: sistematizacija vježbi (offensive and defensive security, cyber kill chain, threat hunting)
+                <img src={logo} class="w-52"/>
                 <aside>
                     <p>Vlasnička prava © {new Date().getFullYear()} Obrtnička škola Koprivnica</p>
                 </aside>
