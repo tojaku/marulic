@@ -94,8 +94,8 @@ const questions = [
     },
     {
         question: "Od koliko se pjevanja (libara) sastoji djelo „Judita“?",
-        options: ["6"],
-        correct: 0,
+        options: ["5", "6", "8", "10"],
+        correct: 1,
     },
 ];
 
