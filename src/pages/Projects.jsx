@@ -25,7 +25,7 @@ export default function Projects(props) {
                             alt="Marulićev grob"
                             class="w-full h-auto rounded shadow"
                         />
-                        <p class="text-sm mt-2 text-center"><i>Marulićev grob</i></p>
+                        <p class="text-sm mt-2 text-center"><i>Marulićev grob</i> <br />Autor: Tin Šimunić, 1.b</p>
                     </div>
                     <div>
                         <img
@@ -33,7 +33,7 @@ export default function Projects(props) {
                             alt="Split u Marulićevo vrijeme"
                             class="w-full h-auto rounded shadow"
                         />
-                        <p class="text-sm mt-2 text-center"><i>Split u Marulićevo vrijeme</i></p>
+                        <p class="text-sm mt-2 text-center"><i>Split u Marulićevo vrijeme</i><br />Autor: Tin Šimunić, 1.b</p>
                     </div>
                     <div>
                         <img
@@ -41,7 +41,7 @@ export default function Projects(props) {
                             alt="Kuća na Šolti"
                             class="w-full h-auto rounded shadow"
                         />
-                        <p class="text-sm mt-2 text-center"><i>Kuća na Šolti</i></p>
+                        <p class="text-sm mt-2 text-center"><i>Kuća na Šolti</i><br />Autor: Tin Šimunić, 1.b</p>
                     </div>
                     <div>
                         <img
@@ -49,7 +49,7 @@ export default function Projects(props) {
                             alt="Judita i Holofern"
                             class="w-full h-auto rounded shadow"
                         />
-                        <p class="text-sm mt-2 text-center"><i>Judita i Holofern</i></p>
+                        <p class="text-sm mt-2 text-center"><i>Judita i Holofern</i><br />Autor: Tin Šimunić, 1.b</p>
                     </div>
                     <div>
                         <img
@@ -57,14 +57,14 @@ export default function Projects(props) {
                             alt="Marko Marulić"
                             class="w-full h-auto rounded shadow"
                         />
-                        <p class="text-sm mt-2 text-center"><i>Marko Marulić</i></p>
+                        <p class="text-sm mt-2 text-center"><i>Marko Marulić</i><br />Autor: Tin Šimunić, 1.b</p>
                     </div>
                 </div>
 
                 {/* Video */}
-                <div class="flex justify-center items-center mb-6">
+                <div class="flex justify-center items-center mt-16">
                     <div class="text-center">
-                        <h2 class="text-xl font-semibold mb-3"><i>Hologram Marka Marulića</i></h2>
+                        <h2 class="text-xl font-semibold mb-9"><i>Hologram Marka Marulića</i></h2>
                         <div class="aspect-w-16 aspect-h-9">
                             <img
                                 src={hologram}
@@ -77,8 +77,8 @@ export default function Projects(props) {
 
 
                 {/* Zaključak */}
-                <p class="text-lg leading-relaxed mt-6">
-                    Ovi radovi predstavljaju bogatu kulturnu baštinu Marka Marulića kroz različite medije, uključujući slike, povijesne rekonstrukcije i suvremene tehnologije poput holograma. Zahvaljujemo svima koji su pridonijeli ovim kreativnim projektima!
+                <p class="text-lg leading-relaxed mt-14 text-center">
+                    Ovi radovi predstavljaju bogatu kulturnu baštinu Marka Marulića kroz različite medije, uključujući slike, povijesne rekonstrukcije i suvremene tehnologije poput holograma. <br /><br />Zahvaljujemo svima koji su pridonijeli ovim kreativnim projektima!
                 </p>
             </div>
         </div>
