@@ -1,84 +1,138 @@
+import { createSignal } from "solid-js";
 import hologram from "../assets/marko_marulic_holo.gif";
 import marulic_grob from "../assets/marulic_grob.webp";
 import split from "../assets/split.png";
 import kuca_na_solti from "../assets/kuca_na_solti.webp";
 import marko_marulic from "../assets/marko_marulic.png";
 import judita_i_holofern from "../assets/judita_i_holofern.png";
+import figura_marka_marulica from "../assets/Figura_Marka_Marulica.jpg";
+import figura_marka_marulica2 from "../assets/Figura_Marka_Marulica_2.jpg";
 
-export default function Projects(props) {
+export default function Projects() {
+    const [isOpen, setIsOpen] = createSignal(false); // Držimo stanje za otvoreni modal
+    const [activeImage, setActiveImage] = createSignal(null); // Držimo podatke o slici
+
+    const images = [
+        {
+            src: marulic_grob,
+            alt: "Marulićev grob",
+            title: "Marulićev grob",
+            author: "Tin Šimunić, 1.b",
+        },
+        {
+            src: split,
+            alt: "Split u Marulićevo vrijeme",
+            title: "Split u Marulićevo vrijeme",
+            author: "Tin Šimunić, 1.b",
+        },
+        {
+            src: kuca_na_solti,
+            alt: "Kuća na Šolti",
+            title: "Kuća na Šolti",
+            author: "Tin Šimunić, 1.b",
+        },
+        {
+            src: judita_i_holofern,
+            alt: "Judita i Holofern",
+            title: "Judita i Holofern",
+            author: "Tin Šimunić, 1.b",
+        },
+        {
+            src: marko_marulic,
+            alt: "Marko Marulić",
+            title: "Marko Marulić",
+            author: "Tin Šimunić, 1.b",
+        },
+        {
+            src: figura_marka_marulica,
+            alt: "Figura Marka Marulića",
+            title: "Figura Marka Marulića izrađena od elektroničkih sklopova",
+            author: "Rad učenika 2.a",
+        },
+        {
+            src: figura_marka_marulica2,
+            alt: "Figura Marka Marulića 2",
+            title: "Figura Marka Marulića izrađena od elektroničkih sklopova",
+            author: "Rad učenika 2.a",
+        },
+    ];
+
+    const openModal = (image) => {
+        setActiveImage(image);
+        setIsOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsOpen(false);
+        setActiveImage(null);
+    };
+
     return (
-        <div>
-            <div class="text-3xl font-bold mb-6">
-                Naši radovi
-            </div>
-            <div>
-                {/* Tekstualni uvod */}
-                <p class="text-lg leading-relaxed mb-6">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl font-extrabold mb-6">Naši radovi</h1>
+                <p class="text-lg leading-relaxed mb-8">
                     Ovdje možete pogledati radove koji prikazuju Marka Marulića, njegov život i djela, kao i naš inovativni projekt holograma koji oživljava <i>Oca hrvatske književnosti</i>.
                 </p>
+            </div>
 
-                {/* Galerija slika */}
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-                    <div>
+            {/* Galerija slika */}
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                {images.map((image, index) => (
+                    <div
+                        key={index}
+                        class="group overflow-hidden rounded-lg shadow-lg bg-white cursor-pointer"
+                        onClick={() => openModal(image)}
+                    >
                         <img
-                            src={marulic_grob}
-                            alt="Marulićev grob"
-                            class="w-full h-auto rounded shadow"
+                            src={image.src}
+                            alt={image.alt}
+                            class="w-full h-60 object-cover transform transition duration-300 ease-in-out group-hover:scale-105"
                         />
-                        <p class="text-sm mt-2 text-center"><i>Marulićev grob</i> <br />Autor: Tin Šimunić, 1.b</p>
-                    </div>
-                    <div>
-                        <img
-                            src={split}
-                            alt="Split u Marulićevo vrijeme"
-                            class="w-full h-auto rounded shadow"
-                        />
-                        <p class="text-sm mt-2 text-center"><i>Split u Marulićevo vrijeme</i><br />Autor: Tin Šimunić, 1.b</p>
-                    </div>
-                    <div>
-                        <img
-                            src={kuca_na_solti}
-                            alt="Kuća na Šolti"
-                            class="w-full h-auto rounded shadow"
-                        />
-                        <p class="text-sm mt-2 text-center"><i>Kuća na Šolti</i><br />Autor: Tin Šimunić, 1.b</p>
-                    </div>
-                    <div>
-                        <img
-                            src={judita_i_holofern}
-                            alt="Judita i Holofern"
-                            class="w-full h-auto rounded shadow"
-                        />
-                        <p class="text-sm mt-2 text-center"><i>Judita i Holofern</i><br />Autor: Tin Šimunić, 1.b</p>
-                    </div>
-                    <div>
-                        <img
-                            src={marko_marulic}
-                            alt="Marko Marulić"
-                            class="w-full h-auto rounded shadow"
-                        />
-                        <p class="text-sm mt-2 text-center"><i>Marko Marulić</i><br />Autor: Tin Šimunić, 1.b</p>
-                    </div>
-                </div>
-
-                {/* Video */}
-                <div class="flex justify-center items-center mt-16">
-                    <div class="text-center">
-                        <h2 class="text-xl font-semibold mb-9"><i>Hologram Marka Marulića</i></h2>
-                        <div class="aspect-w-16 aspect-h-9">
-                            <img
-                                src={hologram}
-                                title="Hologram Marka Marulića"
-                            />
-
+                        <div class="p-4">
+                            <p class="text-sm text-center font-semibold italic">
+                                {image.title}
+                            </p>
+                            <p class="text-xs text-center text-gray-500 mt-1">
+                                {image.author}
+                            </p>
                         </div>
                     </div>
+                ))}
+            </div>
+
+            {/* Modal za prikaz slike */}
+            {isOpen() && (
+                <div
+                    class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+                    onClick={closeModal}
+                >
+                    <div class="relative bg-white rounded-lg overflow-hidden shadow-lg">
+                        <img
+                            src={activeImage().src}
+                            alt={activeImage().alt}
+                            class="w-full h-auto max-h-[90vh] max-w-[90vw] object-contain"
+                        />
+                        <button
+                            class="absolute top-2 right-2 text-white bg-black rounded-full px-3 py-1 text-sm"
+                            onClick={(e) => {
+                                e.stopPropagation(); // Sprječava zatvaranje pri kliku na gumb
+                                closeModal();
+                            }}
+                        >
+                            Zatvori
+                        </button>
+                    </div>
                 </div>
+            )}
 
-
-                {/* Zaključak */}
-                <p class="text-lg leading-relaxed mt-14 text-center">
-                    Ovi radovi predstavljaju bogatu kulturnu baštinu Marka Marulića kroz različite medije, uključujući slike, povijesne rekonstrukcije i suvremene tehnologije poput holograma. <br /><br />Zahvaljujemo svima koji su pridonijeli ovim kreativnim projektima!
+            {/* Zaključak */}
+            <div class="mt-14 text-center">
+                <p class="text-lg leading-relaxed">
+                    Ovi radovi predstavljaju bogatu kulturnu baštinu Marka Marulića kroz različite medije, uključujući slike, povijesne rekonstrukcije i suvremene tehnologije poput holograma.
+                </p>
+                <p class="mt-4 text-lg font-semibold">
+                    Zahvaljujemo svima koji su pridonijeli ovim kreativnim projektima!
                 </p>
             </div>
         </div>
