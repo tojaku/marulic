@@ -1,5 +1,5 @@
 import { createSignal } from "solid-js";
-import hologram from "../assets/marko_marulic_holo.gif";
+import hologram from "../assets/marko_marulic_holo.gif";  // Import holograma
 import marulic_grob from "../assets/marulic_grob.webp";
 import split from "../assets/split.png";
 import kuca_na_solti from "../assets/kuca_na_solti.webp";
@@ -74,6 +74,17 @@ export default function Projects() {
                 <p class="text-lg leading-relaxed mb-8">
                     Ovdje možete pogledati radove koji prikazuju Marka Marulića, njegov život i djela, kao i naš inovativni projekt holograma koji oživljava <i>Oca hrvatske književnosti</i>.
                 </p>
+            </div>
+
+            {/* Hologram */}
+            <div class="text-center mb-12">
+                <h2 class="text-2xl font-semibold mb-4">Naš inovativni hologram Marka Marulića</h2>
+                <div
+                    class="cursor-pointer inline-block"
+                    onClick={() => openModal({ src: hologram, alt: "Hologram Marka Marulića" })}
+                >
+                    <img src={hologram} alt="Hologram Marka Marulića" class="w-48 h-auto mx-auto" />
+                </div>
             </div>
 
             {/* Galerija slika */}
