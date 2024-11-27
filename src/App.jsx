@@ -54,6 +54,7 @@ function TopMenu(props) {
                     </ul>
                 </details>
             </li>
+            <li><a href="/onama" onClick={closeSubmenu}>O nama</a></li>
         </>
     );
 }
@@ -94,26 +95,19 @@ function Layout(props) {
                     </div>
 
                     <a href="/" class="btn btn-ghost hover:bg-transparent hover:text-inherit">
-                        <div class="flex items-center" onClick={() => window.location.href = "/"}>
-                            <img src={novcanica} class="w-32 mr-4" alt="Novčanica Marko Marulić" />
+                        <div class="flex items-top">
+                            <img src={novcanica} class="w-44 mr-4" alt="Novčanica Marko Marulić" />
                             <div class="flex flex-col">
                                 <span class="text-xl">Marko Marulić</span>
                                 <span class="text-xs">u Obrtničkoj školi Koprivnica</span>
                             </div>
                         </div>
                     </a>
-
-
-
-
                 </div>
-                <div class="navbar-center hidden lg:flex">
+                <div class="navbar-end hidden lg:flex">
                     <ul class="menu menu-horizontal px-1 gap-1">
                         <TopMenu />
                     </ul>
-                </div>
-                <div class="navbar-end">
-                    <a href="/onama" class="btn bg-base-100">O nama</a>
                 </div>
             </div>
 

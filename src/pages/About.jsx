@@ -29,7 +29,7 @@ export default function About(props) {
 
                     {/* TODO: Potrebno dodati ostale ucenike iz drugih razreda */}
                     <p class="font-semibold">Ostali učenici:</p>
-                    <ul class="list-disc list-inside grid grid-cols-2">
+                    <ul class="list-disc list-inside grid lg:grid-cols-2 grid-cols-1">
                         <li>Ivano Grubić</li>
                         <li>Marko Habek</li>
                         <li>Fran Horvat</li>
