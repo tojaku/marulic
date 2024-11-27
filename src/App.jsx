@@ -95,14 +95,19 @@ function Layout(props) {
                     </div>
 
                     <a href="/" class="btn btn-ghost hover:bg-transparent hover:text-inherit">
-                        <div class="flex items-top">
-                            <img src={novcanica} class="w-44 mr-4" alt="Novčanica Marko Marulić" />
+                        <div class="flex items-center">
+                            <img
+                                src={novcanica}
+                                class="w-28 h-auto object-contain mr-4"
+                                alt="Novčanica Marko Marulić"
+                            />
                             <div class="flex flex-col">
-                                <span class="text-xl">Marko Marulić</span>
-                                <span class="text-xs">u Obrtničkoj školi Koprivnica</span>
+                                <span class="text-xl font-bold">Marko Marulić</span>
+                                <span class="text-xs text-gray-600">u Obrtničkoj školi Koprivnica</span>
                             </div>
                         </div>
                     </a>
+
                 </div>
                 <div class="navbar-end hidden lg:flex">
                     <ul class="menu menu-horizontal px-1 gap-1">
