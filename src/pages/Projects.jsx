@@ -140,7 +140,7 @@ export default function Projects() {
             {/* Zaključak */}
             <div class="mt-14 text-center">
                 <p class="text-lg leading-relaxed">
-                    Ovi radovi predstavljaju bogatu kulturnu baštinu Marka Marulića kroz različite medije, uključujući slike, povijesne rekonstrukcije i suvremene tehnologije poput holograma.
+                    Ovi radovi predstavljaju bogatu kulturnu baštinu Marka Marulića putem različitih medija, uključujući slike, povijesne rekonstrukcije i suvremene tehnologije poput holograma.
                 </p>
                 <p class="mt-4 text-lg font-semibold">
                     Zahvaljujemo svima koji su pridonijeli ovim kreativnim projektima!

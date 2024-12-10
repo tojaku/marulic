@@ -49,7 +49,7 @@ function TopMenu(props) {
                         <li><a href="/price">Priče</a></li>
                         <li><a href="/kuharica">Kuharica</a></li>
                         <li><a href="/radovi">Naši radovi</a></li>
-                        <li><a href="/predstava">Predstava</a></li>
+                        <li><a href="/predstava">Što smo pronašli?</a></li>
                         <li><a href="/kviz">Kviz</a></li>
                     </ul>
                 </details>
