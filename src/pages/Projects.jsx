@@ -46,14 +46,14 @@ export default function Projects() {
         {
             src: figura_marka_marulica,
             alt: "Figura Marka Marulića",
-            title: "Figura Marka Marulića izrađena od elektroničkih sklopova",
-            author: "Rad učenika 2.a",
+            title: "Figurica Marko Marulić, izrađena od elektroničkih sklopova",
+            author: "rad učenika 2.a",
         },
         {
             src: figura_marka_marulica2,
             alt: "Figura Marka Marulića 2",
-            title: "Figura Marka Marulića izrađena od elektroničkih sklopova",
-            author: "Rad učenika 2.a",
+            title: "Figurica Marko Marulić, izrađena od elektroničkih sklopova",
+            author: "rad učenika 2.a",
         },
     ];
 
@@ -72,7 +72,9 @@ export default function Projects() {
             <div class="text-center">
                 <h1 class="text-4xl font-extrabold mb-6">Naši radovi</h1>
                 <p class="text-lg leading-relaxed mb-8">
-                    Ovdje možete pogledati radove koji prikazuju Marka Marulića, njegov život i djela, kao i naš inovativni projekt holograma koji oživljava <i>Oca hrvatske književnosti</i>.
+                    Ovdje možete pogledati radove koji prikazuju Marka Marulića, njegov život i
+                    djela, kao i naš inovativni projekt – hologram koji oživljava Oca hrvatske
+                    književnosti.
                 </p>
             </div>
 
@@ -83,9 +85,10 @@ export default function Projects() {
                     class="cursor-pointer inline-block"
                     onClick={() => openModal({ src: hologram, alt: "Hologram Marka Marulića" })}
                 >
-                    <img src={hologram} alt="Hologram Marka Marulića" class="w-48 h-auto mx-auto" />
+                    <img src={hologram} alt="Hologram Marka Marulića" class="mx-auto w-80 h-80 object-cover rounded-full" />
                 </div>
             </div>
+
 
             {/* Galerija slika */}
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
@@ -140,10 +143,11 @@ export default function Projects() {
             {/* Zaključak */}
             <div class="mt-14 text-center">
                 <p class="text-lg leading-relaxed">
-                    Ovi radovi predstavljaju bogatu kulturnu baštinu Marka Marulića putem različitih medija, uključujući slike, povijesne rekonstrukcije i suvremene tehnologije poput holograma.
+                    Radovi inspirirani životom i djelom Marka Marulića ostvareni su u različitim
+                    područjima – likovna umjetnost, povijesna rekonstrukcija i suvremena tehnologija.
                 </p>
                 <p class="mt-4 text-lg font-semibold">
-                    Zahvaljujemo svima koji su pridonijeli ovim kreativnim projektima!
+                    Zahvaljujemo svima koji su sudjelovali u ovomu kreativnom projektu!
                 </p>
             </div>
         </div>
