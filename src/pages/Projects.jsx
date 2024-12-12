@@ -80,7 +80,7 @@ export default function Projects() {
 
             {/* Hologram */}
             <div class="text-center mb-12">
-                <h2 class="text-2xl font-semibold mb-4">Naš inovativni hologram Marka Marulića</h2>
+                <h2 class="text-2xl font-semibold mb-4">Inovativni hologram Marka Marulića</h2>
                 <div
                     class="cursor-pointer inline-block"
                     onClick={() => openModal({ src: hologram, alt: "Hologram Marka Marulića" })}
