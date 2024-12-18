@@ -13,6 +13,7 @@ import Biography from "./pages/Biography";
 import Works from "./pages/Works";
 import Funding from "./pages/Funding";
 import Quiz from "./pages/Quiz";
+import Promotion from "./pages/Promotion";
 
 export default function App(props) {
     return (
@@ -27,6 +28,7 @@ export default function App(props) {
             <Route path="/stvaralastvo" component={Works} />
             <Route path="/oprojektu" component={Funding} />
             <Route path="/kviz" component={Quiz} />
+            <Route path="/promocija" component={Promotion} />
         </HashRouter>
     );
 }
@@ -46,6 +48,7 @@ function TopMenu(props) {
                 <details ref={submenu}>
                     <summary>Zanimljivosti</summary>
                     <ul class="p-2" onClick={closeSubmenu}>
+                        <li><a href="/promocija">Promocija</a></li>
                         <li><a href="/price">Priče</a></li>
                         <li><a href="/kuharica">Kuharica</a></li>
                         <li><a href="/radovi">Naši radovi</a></li>
